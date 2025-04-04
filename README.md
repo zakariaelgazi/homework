@@ -3,6 +3,12 @@
 ## Overview
 
 This dbt project transforms raw event data from RTS (Radio Télévision Suisse) to create a robust and scalable data model for analysis and reporting. The project leverages Snowflake for data storage and Looker Studio for visualization.
+This project transforms raw event data from RTS (Radio Télévision Suisse) into aggregated datamarts tailored to business needs. The focus is on creating user-friendly tables that are easy to interpret and directly usable for reporting, ensuring quick access to insights on the front end. This approach minimizes the need for complex data reconstruction, making it simpler for future collaborators to understand and extend the project.
+
+Key decisions include:
+
+* Prioritizing aggregated datamarts for fast and efficient reporting.
+* Designing tables that are intuitive and aligned with business requirements.
 
 ## Project Structure
 
@@ -174,4 +180,11 @@ This dbt project transforms raw event data from RTS (Radio Télévision Suisse) 
         *   `content_type_fr`: Content type in French.
         *   `views_per_session`: Average session duration on content pages.
         *   `popularity_tier`: Tier based on view count.
+
+## Reporting made with Looker Studio
+
+<img width="717" alt="Capture d’écran 2025-04-04 à 08 31 36" src="https://github.com/user-attachments/assets/bac5e0f9-e97d-406a-adcb-4adf5f458478" />
+<img width="677" alt="Capture d’écran 2025-04-04 à 08 32 04" src="https://github.com/user-attachments/assets/706eb26e-b5d5-44b7-9c37-0944fb4da7f1" />
+<img width="620" alt="Capture d’écran 2025-04-04 à 08 32 42" src="https://github.com/user-attachments/assets/a8f79e49-a2fb-44e3-b2cd-2632067ebfa2" />
+
 
