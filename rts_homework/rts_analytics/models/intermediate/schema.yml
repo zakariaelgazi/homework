@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: int_sessions
+    description: "Aggregated session data from RTS Play events"
+    columns:
+      - name: session_id
+        description: "Unique identifier for a user session"
+        tests:
+          - unique
+          - not_null
+      - name: cookie_id
+        description: "Unique identifier for the user's browser"
+      - name: session_start_time
+        description: "Start time of the session"
+      - name: session_end_time
+        description: "End time of the session"
+      - name: events_count
+        description: "Number of events in the session"
+      - name: session_duration_seconds
+        description: "Duration of the session in seconds"
+
+  - name: int_content_views
+    description: "Aggregated content view data from RTS Play"
+    columns:
+      - name: content_title_pretty
+        description: "Title of the content"
+        tests:
+          - not_null
+      - name: content_page_type
+        description: "Type of content (VIDEO, show, embed, liveTV)"
+      - name: view_count
+        description: "Total number of views"
+      - name: unique_session_count
+        description: "Number of unique sessions that viewed this content"
+      - name: unique_user_count
+        description: "Number of unique users that viewed this content"
+
+  - name: int_geographic_distribution
+    description: "Geographic distribution of RTS Play usage"
+    columns:
+      - name: country_code
+        description: "Country code of the user"
+      - name: region_code
+        description: "Region code of the user"
+      - name: city
+        description: "City of the user"
+      - name: view_count
+        description: "Total number of views from this location"
+      - name: unique_session_count
+        description: "Number of unique sessions from this location"
+      - name: unique_user_count
+        description: "Number of unique users from this location"

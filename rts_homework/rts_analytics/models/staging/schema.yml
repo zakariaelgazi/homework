@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: "Staged events data from RTS Play"
+    columns:
+      - name: cookie_id
+        description: "Unique identifier for the user's browser"
+      - name: session_id
+        description: "Unique identifier for a user session"
+      - name: event_date
+        description: "Date of the event in CET timezone"
+      - name: event_timestamp
+        description: "Timestamp of the event in CET timezone"
+      - name: url
+        description: "URL of the page being viewed"
+      - name: content_page_type
+        description: "Type of content page (VIDEO, show, embed, liveTV, etc.)"
+      - name: content_title_pretty
+        description: "Title of the content being viewed"
+      - name: country_code
+        description: "Country code of the user"
+      - name: region_code
+        description: "Region code of the user"
+      - name: city
+        description: "City of the user"
+      - name: device_type
+        description: "Type of device used"
+      - name: is_bot
+        description: "Flag indicating if the request was made by a bot"

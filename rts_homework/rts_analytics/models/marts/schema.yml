@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: fact_content_analytics
+    description: "Analytics for content consumption on RTS Play"
+    columns:
+      - name: content_title_pretty
+        description: "Title of the content"
+      - name: content_page_type
+        description: "Type of content (VIDEO, show, embed, liveTV)"
+      - name: view_count
+        description: "Total number of views"
+      - name: unique_session_count
+        description: "Number of unique sessions that viewed this content"
+      - name: unique_user_count
+        description: "Number of unique users that viewed this content"
+      - name: content_type_fr
+        description: "Content type in French"
+      - name: popularity_tier
+        description: "Categorization of content popularity (High, Medium, Low)"
+
+  - name: fact_audience_geography
+    description: "Geographic analysis of the RTS Play audience"
+    columns:
+      - name: country_code
+        description: "Country code of the user"
+      - name: country_name
+        description: "Full country name"
+      - name: region_code
+        description: "Region code of the user"
+      - name: city
+        description: "City of the user"
+      - name: view_count
+        description: "Total number of views from this location"
+      - name: unique_session_count
+        description: "Number of unique sessions from this location"
+      - name: unique_user_count
+        description: "Number of unique users from this location"
+      - name: audience_size_tier
+        description: "Categorization of audience size (High, Medium, Low)"
+
+  - name: fact_user_engagement
+    description: "User engagement metrics for RTS Play"
+    columns:
+      - name: cookie_id
+        description: "Unique identifier for the user's browser"
+      - name: total_sessions
+        description: "Total number of sessions by the user"
+      - name: avg_session_duration_seconds
+        description: "Average session duration in seconds"
+      - name: total_engagement_seconds
+        description: "Total time engaged in seconds"
+      - name: user_type
+        description: "Categorization of user behavior (Returning User, Repeat Visitor, One-time Visitor)"
+      - name: engagement_level
+        description: "Level of user engagement (High, Medium, Low)"
+
+  - name: fact_daily_metrics
+    description: "Daily aggregated metrics for RTS Play"
+    columns:
+      - name: event_date
+        description: "Date of the events"
+      - name: total_page_views
+        description: "Total number of page views"
+      - name: unique_sessions
+        description: "Number of unique sessions"
+      - name: unique_users
+        description: "Number of unique users"
+      - name: video_views
+        description: "Number of video views"
+      - name: live_tv_views
+        description: "Number of live TV views"
+      - name: avg_session_duration_seconds
+        description: "Average session duration in seconds"

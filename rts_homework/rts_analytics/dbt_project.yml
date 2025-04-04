@@ -1,0 +1,30 @@
+name: 'rts_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'rts_analytics'
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+models:
+  rts_analytics:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      core:
+        +schema: core
+      reporting:
+        +schema: reporting
+        +materialized: table

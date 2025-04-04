@@ -1,0 +1,13 @@
+rts_analytics:
+  outputs:
+    dev:
+      type: snowflake
+      account: hb89467.europe-west3.gcp
+      user: zakaria
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ACCOUNTADMIN
+      database: RTS_ANALYTICS
+      warehouse: COMPUTE_WH
+      schema: main
+      threads: 4
+  target: dev
