@@ -60,7 +60,6 @@ Key decisions include:
         ```
         dbt build
         ```
-        ```
     *   **dbt docs generate:**  Generates a documentation website for your project.
 
         ```
