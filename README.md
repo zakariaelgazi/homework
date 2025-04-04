@@ -86,8 +86,6 @@ This dbt project transforms raw event data from RTS (Radio Télévision Suisse) 
         *   `session_start_time`:  Start time of the session.
         *   `session_end_time`: End time of the session.
         *   `events_count`: Total number of events in the session.
-        *   `visited_urls`: Array of URLs visited during the session.
-        *   `content_types_viewed`: Array of content types viewed during the session.
         *   `country_code`: Country code of the session.
         *   `region_code`: Region code of the session.
         *   `city`: City of the session.
